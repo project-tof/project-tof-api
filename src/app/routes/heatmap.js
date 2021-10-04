@@ -28,8 +28,8 @@ Router.get('/location', async (req, res) => {
       name: month.name,
       maxTempC: month.absMaxTemp,
       avgDailyRainfall: month.avgDailyRainfall,
-    }
-  })
+    };
+  });
 
   avgYearlyTemp = ((avgYearlyTemp) / 12);
 
@@ -46,9 +46,9 @@ Router.get('/location', async (req, res) => {
     climateAverage: customClimateAverage,
     yearlyTempAlert: yearlyTempAlert,
     dailyFeelsLikeAlert: dailyFeelsLikeAlert
-  }
+  };
 
-  return res.json({ ...customData })
+  return res.json({ ...customData });
 })
 
 

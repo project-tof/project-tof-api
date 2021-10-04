@@ -20,7 +20,7 @@ Router.get('/worldtemperature', async (req, res) => {
 
   let oldLanddVerifier = response.result[0].land;
   let resulOldtLand;
-  let newLandVerifier = Number(response.result[response.result.length - 1].land)
+  let newLandVerifier = Number(response.result[response.result.length - 1].land);
   let resultNewLand;
 
 
@@ -33,7 +33,7 @@ Router.get('/worldtemperature', async (req, res) => {
     landIncrease: (resulOldtLand + resultNewLand).toFixed(2),
     initialDate: response.result[0].time,
     finalDate: response.result[response.result.length - 1].time
-  }
+  };
 
   return res.json({ 
     ...data 
